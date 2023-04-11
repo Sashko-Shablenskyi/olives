@@ -1,0 +1,54 @@
+.footer {
+  position: relative;
+  z-index: 10;
+  background-color: $accentColor;
+  padding: rem(38);
+
+  &__inner {
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: calc(18 / 14);
+    letter-spacing: 0.1px;
+    color: $secondaryTextColor;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+      gap: rem(25);
+    }
+  }
+
+  &__nav {
+    &-list {
+      font-weight: 500;
+      font-size: rem(14);
+      line-height: calc(18 / 14);
+      letter-spacing: rem(0.1);
+      color: $secondaryTextColor;
+      gap: rem(25);
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__logo {
+    justify-content: center;
+  }
+
+  &__social {
+    gap: rem(14);
+    justify-content: flex-end;
+  }
+
+  &__logo,
+  &__nav-list,
+  &__social {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $tablet) {
+      justify-content: center;
+    }
+  }
+}
