@@ -1,0 +1,9 @@
+.intro {
+  margin: rem(-100) 0 0;
+  background: url(../img/intro/intro-bg.png) center center/cover no-repeat;
+  min-height: rem(690);
+
+  &__inner {
+    @include adaptiveValue('padding-top', 207, 120);
+  }
+}

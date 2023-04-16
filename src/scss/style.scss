@@ -169,7 +169,10 @@ body {
 // Підключення стилів окремих блоків
 @import 'header';
 @import 'footer';
-@import 'sections/intro.scss';
+@import 'intro';
+@import 'what';
+@import 'quote';
+@import 'contacts';
 
 // Підключення стилів окремих сторінок
 @import 'home';

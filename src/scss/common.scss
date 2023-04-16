@@ -21,14 +21,6 @@
   }
 }
 
-.title {
-  font-weight: 600;
-  font-size: rem(32);
-  line-height: calc(42 / 32);
-  letter-spacing: rem(0.1);
-  color: $secondaryAccentColor;
-}
-
 .logo {
   position: relative;
   z-index: 11;
@@ -37,6 +29,8 @@
 .menu-open {
   .nav {
     right: 0;
+    position: relative;
+    z-index: 11;
   }
 
   .icon-menu span,
@@ -75,5 +69,85 @@
       font-size: rem(24);
       color: $secondaryTextColor;
     }
+  }
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: rem(18);
+  line-height: calc(24 / 18);
+  text-align: center;
+  letter-spacing: rem(0.2);
+  color: $secondaryAccentColor;
+}
+
+.title {
+  @include adaptiveValue('margin-top', 22, 15);
+  @include adaptiveValue('margin-bottom', 35, 25);
+  @include adaptiveValue('font-size', 44, 32);
+  line-height: calc(54 / 44);
+
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 54px;
+  text-align: center;
+  color: $accentColor;
+
+  span {
+    color: $secondaryAccentColor;
+  }
+}
+
+.descr {
+  max-width: rem(470);
+  color: $accentColor;
+  font-weight: 500;
+  line-height: calc(24 / 18);
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+
+.article {
+  padding: rem(104) 0 0;
+  &__inner {
+    display: flex;
+    gap: rem(52);
+    @media (max-width: $tablet) {
+      flex-wrap: wrap-reverse;
+    }
+  }
+  &__title {
+    font-weight: 600;
+    font-size: rem(32);
+    line-height: calc(42 / 32);
+    letter-spacing: rem(0.1);
+    color: $secondaryAccentColor;
+    text-transform: uppercase;
+    padding: rem(30) 0 0 rem(10);
+    margin-left: rem(-10);
+    background: url(../img/title/title-img.png) top left/auto no-repeat;
+  }
+  &__img {
+    width: 100%;
+    img {
+      @media (max-width: $tablet) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__text {
+    line-height: calc(24 / 18);
+    letter-spacing: rem(0.2);
+  }
+
+  &__descr {
+    @include adaptiveValue('margin-top', 48, 28);
+    @include adaptiveValue('margin-bottom', 24, 14);
+  }
+
+  &__more {
+    text-transform: uppercase;
+    color: $secondaryAccentColor;
   }
 }
