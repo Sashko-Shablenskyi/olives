@@ -1,10 +1,56 @@
 .footer {
   position: relative;
   z-index: 10;
-  background-color: $accentColor;
-  padding: rem(38);
 
-  &__inner {
+  &__top {
+    display: grid;
+    grid-template-columns: 0.7fr 0.5fr 1fr 1fr;
+    color: $accentColor;
+    @include adaptiveValue('padding-bottom', 70, 45);
+    @include adaptiveValue('gap', 60, 30);
+
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $mobileSmall) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__menu {
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: calc(18 / 14);
+    letter-spacing: rem(0.1);
+  }
+
+  &__menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: rem(25);
+  }
+
+  &__title {
+    font-weight: 500;
+    line-height: calc(24 / 18);
+    letter-spacing: rem(0.2);
+  }
+
+  &__descr {
+    font-weight: 400;
+    font-size: rem(14);
+    line-height: calc(22 / 14);
+    letter-spacing: rem(0.1);
+  }
+
+  &__btn {
+    margin: rem(17) 0;
+  }
+
+  &__bottom {
+    background-color: $accentColor;
+    padding: rem(38);
     font-weight: 500;
     font-size: rem(14);
     line-height: calc(18 / 14);
@@ -20,6 +66,8 @@
   }
 
   &__nav {
+    display: flex;
+    align-items: center;
     &-list {
       font-weight: 500;
       font-size: rem(14);

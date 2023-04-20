@@ -2,7 +2,7 @@
 .btn {
   border-width: 2px;
   border-style: solid;
-  border-radius: 5px;
+  border-radius: rem(5);
   padding: rem(20) 0;
   width: rem(195);
   font-weight: 600;
@@ -13,11 +13,21 @@
   justify-content: center;
   letter-spacing: rem(0.2);
   cursor: pointer;
+  background: rgba(255, 255, 255, 0.6);
 
-  &-header {
+  &-accentBG {
+    background-color: $accentColor;
+    color: $bdColor;
+  }
+
+  &-accentColor {
     border-color: $accentColor;
     color: $accentColor;
-    background: rgba(255, 255, 255, 0.6);
+  }
+
+  &-accentColorTwo {
+    border: rem(2) solid $secondaryAccentColor;
+    color: $secondaryAccentColor;
   }
 }
 
@@ -99,8 +109,7 @@
 }
 
 .descr {
-  max-width: rem(470);
-  color: $accentColor;
+  color: $secondaryAccentColor;
   font-weight: 500;
   line-height: calc(24 / 18);
   text-align: center;
@@ -108,7 +117,8 @@
 }
 
 .article {
-  padding: rem(104) 0 0;
+  @include adaptiveValue('padding-top', 104, 52);
+
   &__inner {
     display: flex;
     gap: rem(52);

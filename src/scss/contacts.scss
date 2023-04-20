@@ -1,0 +1,18 @@
+.contacts {
+  background: url(../img/contacts/contacts_bg.png) center center/cover no-repeat;
+  @include adaptiveValue('margin-top', 144, 75);
+
+  &__inner {
+    @include adaptiveValue('padding-top', 233, 150);
+    @include adaptiveValue('padding-bottom', 344, 260);
+  }
+
+  &__descr {
+    max-width: rem(470);
+    margin: 0 auto;
+  }
+
+  &__btn {
+    margin: rem(40) auto;
+  }
+}

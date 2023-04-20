@@ -1,5 +1,6 @@
 .what {
-  padding: rem(157) 0 0;
+  @include adaptiveValue('padding-top', 157, 77);
+
   &__inner {
     display: flex;
     flex-direction: column;

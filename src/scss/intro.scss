@@ -3,7 +3,20 @@
   background: url(../img/intro/intro-bg.png) center center/cover no-repeat;
   min-height: rem(690);
 
+  @media (max-width: $tablet) {
+    @include adaptiveValue('min-height', 690, 550);
+  }
+
   &__inner {
     @include adaptiveValue('padding-top', 207, 120);
+  }
+
+  &__title,
+  &__subtitle {
+    text-align: left;
+  }
+
+  &__descr {
+    max-width: rem(468);
   }
 }
